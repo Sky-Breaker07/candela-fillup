@@ -1,0 +1,19 @@
+{
+  "name": "fill-up",
+  "displayName": "FILLUP",
+  "react-native": {
+    "android": {
+      "package": "com.candela.fillup",
+      "googleMapsApiKey": "AIzaSyDQiZU7d7vwSwkfpkGq_2Pzn2JUirdpI-s"
+    },
+    "ios": {
+      "bundleIdentifier": "com.candela.fillup",
+      "googleMapsApiKey": "AIzaSyDQiZU7d7vwSwkfpkGq_2Pzn2JUirdpI-s",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "FILLUP needs your location to find the nearest fuel stations.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "FILLUP needs your location to find the nearest fuel stations."
+      }
+    }
+  }
+}
