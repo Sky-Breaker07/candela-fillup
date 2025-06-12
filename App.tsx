@@ -13,7 +13,6 @@ import { Button, StyleSheet } from "react-native";
 import ErrorBoundary from "./src/components/ErrorBoundary";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { store } from "./store";
-import { Text, View } from "react-native";
 import { useEffect } from "react";
 import authService from "./src/utils/authService";
 import { checkAuthStatus } from "./store/slices/authSlice";
