@@ -1,10 +1,11 @@
-const linkAssets = require('@react-native-community/cli-link-assets');
-
 module.exports = {
   project: {
     ios: {},
     android: {},
   },
-  assets: ['./assets/'],
-  commands: [linkAssets.commands.linkAssets]
+  // Ensure other static assets (images, fonts, etc.) are linked.
+  assets: [
+    './assets/',
+    './node_modules/react-native-vector-icons/Fonts',
+  ],
 }; 

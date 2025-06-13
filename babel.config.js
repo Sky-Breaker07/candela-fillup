@@ -2,11 +2,19 @@ module.exports = function (api) {
   api.cache(true);
   return {
     presets: [
-      "module:metro-react-native-babel-preset",
-      "@babel/preset-typescript",
+      "@react-native/babel-preset",
+      [
+        "@babel/preset-typescript",
+        {
+          allowDeclareFields: true,
+        },
+      ],
       "nativewind/babel"
     ],
     plugins: [
+      "babel-plugin-syntax-hermes-parser",
+      ["@babel/plugin-transform-private-methods", {"loose": true}],
+      ["@babel/plugin-transform-private-property-in-object", {"loose": true}],
       [
         "module-resolver",
         {
@@ -17,6 +25,12 @@ module.exports = function (api) {
           }
         }
       ]
-    ]
+    ],
+    overrides: [
+      {
+        test: "./node_modules/react-native/index.js",
+        plugins: [["@babel/plugin-transform-typescript", {allowDeclareFields: true}]],
+      },
+    ],
   };
 };
