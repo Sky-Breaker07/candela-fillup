@@ -158,7 +158,7 @@ const Signup = () => {
                   if (generalError) setGeneralError("");
                 }}
                 secureTextEntry={secure}
-                className="flex-1 text-base"
+                className="flex-1 text-base text-black"
               />
               <TouchableOpacity onPress={() => setSecure(!secure)}>
                 <Text className="text-gray-500 text-sm">{secure ? "Show" : "Hide"}</Text>
@@ -212,7 +212,7 @@ const Signup = () => {
                   if (generalError) setGeneralError("");
                 }}
                 secureTextEntry={secureConfirm}
-                className="flex-1 text-base"
+                className="flex-1 text-base text-black"
               />
               <TouchableOpacity onPress={() => setSecureConfirm(!secureConfirm)}>
                 <Text className="text-gray-500 text-sm">{secureConfirm ? "Show" : "Hide"}</Text>
